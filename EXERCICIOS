@@ -1,0 +1,6 @@
+
+06 - Quando a RAM está cheia, ou parcialmente cheia, a MMU começa a tratar a memória secundária como extensão temporária da RAM. 
+O que significa que, nesse estado, a memória virtual aponta para arquivos de paginação temporários no disco com páginas que não cabem
+na RAM. Essas páginas vão ser carregados lentamente no momento em que a RAM volta a dispor de espaço não ocupado.
+
+07 - Memória Virtual
