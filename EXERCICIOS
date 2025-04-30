@@ -1,4 +1,9 @@
 
+01 - A pagniação surgiu como solução à fragmentação exerna, pois cria áreas não contínuas na memória que um processo pode referenciar
+por meio de uma tabela de páginas. Isso impede o problema em que um processo precisa necessariamente alocar um espaço contínuo na memória
+seu funcionamento. A segmentação separa a memória em blocos com tamanhos diferentes e que podem variar dependendo da execução do programa,
+o que possibilita a expansão dinâmicas desses segmentos.
+
 06 - Quando a RAM está cheia, ou parcialmente cheia, a MMU começa a tratar a memória secundária como extensão temporária da RAM. 
 O que significa que, nesse estado, a memória virtual aponta para arquivos de paginação temporários no disco com páginas que não cabem
 na RAM. Essas páginas vão ser carregados lentamente no momento em que a RAM volta a dispor de espaço não ocupado.
