@@ -4,6 +4,16 @@ por meio de uma tabela de páginas. Isso impede o problema em que um processo pr
 seu funcionamento. A segmentação separa a memória em blocos com tamanhos diferentes e que podem variar dependendo da execução do programa,
 o que possibilita a expansão dinâmicas desses segmentos.
 
+03 - As page faults ocorrem pelo motivo do espaçamento virtual, geralmente, sempre ser maior que o espaçamento físico. Isso implica
+dizer que nem todas as páginas virtuais estão mapeadas em páginas físicas. A page fault é a interrupção quando se utiliza uma instrução
+com um endereço virtual não mapeado ou também quando não se tem autoriazação ao acesso da página. O SO, por meio de um algoritimo de paginação,
+vai escolher um quadro de página para ser substituído pelo endereço que causou a interrupção e vai realizar essa ação.
+
+05 - O threashing ocorre quando o tempo de carregamento (swapping) de uma página é maior que o tempo que a CPU passa processando instruções.
+Situação que é elevada quando se tem ocorrência de page faults, que é no momento em que o SO detecta o threashing. Para impedir as interrupções
+massivas por page faults, o SO verifica se o conjunto de trabalho de um processo está mapeado na memória física antes de executá-lo. Ou seja,
+o processo só irá executar após o carregamento de todas as suas páginas.
+
 06 - Quando a RAM está cheia, ou parcialmente cheia, a MMU começa a tratar a memória secundária como extensão temporária da RAM. 
 O que significa que, nesse estado, a memória virtual aponta para arquivos de paginação temporários no disco com páginas que não cabem
 na RAM. Essas páginas vão ser carregados lentamente no momento em que a RAM volta a dispor de espaço não ocupado.
